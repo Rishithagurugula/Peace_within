@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Peace Within | Login</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+	color: #fff;
+	background:  #C9F5F1/*#77F2DA /*#19aa8d*/;
+	font-family: 'Roboto', sans-serif;
+}
+.form-control {
+	font-size: 15px;
+}
+.form-control, .form-control:focus, .input-group-text {
+	border-color: #e1e1e1;
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+.login-form {
+	width: 400px;
+	margin: 0 auto;
+	padding: 30px 0;		
+}
+.login-form form {
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.login-form h2 {
+	color: #333;
+	font-weight: bold;
+	margin-top: 0;
+}
+.login-form hr {
+	margin: 0 -30px 20px;
+}
+.login-form .form-group {
+	margin-bottom: 20px;
+}
+.login-form label {
+	font-weight: normal;
+	font-size: 15px;
+}
+.login-form .form-control {
+	min-height: 38px;
+	box-shadow: none !important;
+}	
+.login-form .input-group-addon {
+	max-width: 42px;
+	text-align: center;
+}	
+.login-form .btn, .login-form .btn:active {        
+	font-size: 16px;
+	font-weight: bold;
+	background: #19aa8d !important;
+	border: none;
+	min-width: 140px;
+}
+.login-form .btn:hover, .login-form .btn:focus {
+	background: #179b81 !important;
+}
+.login-form a {
+	color: #fff;	
+	text-decoration: underline;
+}
+.login-form a:hover {
+	text-decoration: none;
+}
+.login-form form a {
+	color: #19aa8d;
+	text-decoration: none;
+}	
+.login-form form a:hover {
+	text-decoration: underline;
+}
+.login-form .fa {
+	font-size: 21px;
+}
+.login-form .fa-paper-plane {
+	font-size: 18px;
+}
+.login-form .fa-check {
+	color: #fff;
+	left: 17px;
+	top: 18px;
+	font-size: 7px;
+	position: absolute;
+}
+</style>
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary fixed-top">
+      <div class="container">
+        <center><a class="navbar-brand" href="home.html">Peace Within</a></center>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="connect.html">Connect</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Signup.html"><span class="glyphicon glyphicon-user"></span></a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<div class="login-form">
+    <form action="/examples/actions/confirmation.php" onSubmit="return validation()" method="post">
+		<h2 align="center">LOGIN</h2>
+		
+        <div class="form-group">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fa fa-paper-plane"></i>
+					</span>                    
+				</div>
+				<input type="email" class="form-control" id="Email" name="email" placeholder="Email Address" required="required">
+			</div>
+        </div>
+		<div class="form-group">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fa fa-lock"></i>
+					</span>                    
+				</div>
+				<input type="text" class="form-control" id="Password" name="password" placeholder="Password" required="required">
+				
+				<span class="input-group-text">
+				<i class="fa fa-eye" onClick="myFunction()"></i>
+				</span> 
+			</div>
+			
+		</div>
+      <script>
+      function myFunction() {
+      var x = document.getElementById("Password");
+      if (x.type === "password") {
+          x.type = "text";
+      } else {
+        x.type = "password";
+      }
+      }
+      </script>
+	  <center>
+		<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+        </div>
+		</center>
+         <div class="text-center">Forgot Password? <a href="Signup.html"> Sign up</a></div>
+	</form>
+</div>
+<script>
+                function validation()
+                {
+                    var id=document.f1.Email.value;
+                    var ps=document.f1.Password.value;
+                    if(id.length=="" && ps.length=="") {
+                        alert("Email and Password fields are empty");
+                        return false;
+                    }
+                    else
+                    {
+                        if(id.length=="") {
+                            alert("Email is empty");
+                            return false;
+                        }
+                        if (ps.length=="") {
+                        alert("Password field is empty");
+                        return false;
+                        }
+                    }
+                }
+            </script>
+<br>
+<footer class="py-5 bg-secondary">
+  <div class="container">
+    <p class="m-0 text-center text-white">  ? 2022 Copyright.  All Rights Reserved | Peace Within</p>
+  </div>
+</footer>
+</body>
+</html>
